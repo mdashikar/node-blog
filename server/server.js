@@ -54,7 +54,7 @@ app.use(function(req, res, next){
 });
 
 // Handle Sessions
-app.use(session({
+app.use(require('cookie-session')({
     secret: 'secret',
     saveUninitialized: true,
     resave: true

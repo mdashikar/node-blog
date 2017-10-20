@@ -11,7 +11,7 @@ if(process.env.MONGODB_URI) {
         if(err){
             console.log(err);
         }else {
-            console.log('mongoose connection is successful on: ' + db);
+            console.log('mongoose connection is successful on local host');
         }
     });
 }
