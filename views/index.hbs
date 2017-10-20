@@ -1,0 +1,195 @@
+<section id="blog-section">
+    <div class="container">
+        {{#if message}}
+                <div class="alert alert-success" role="alert">
+                    <strong>Oh Great! {{message}}</strong> 
+                </div>
+            {{/if}}
+        <div class="row">
+            
+            {{#if posts}}           
+            <div class="col-lg-8">
+                <div class="row">
+                    {{#each posts}}
+                    <div class="col-lg-6 col-md-6">
+                        <aside>
+                            <img src="/images/{{this.mainimage}}" class="img-fluid">
+                            <div class="content-title">
+                                <div class="text-center">
+                                    <h3><a href="/posts/singlepage/{{this._id}}">{{this.title}}</a></h3>
+                                </div>
+                                <ul class="list-inline text-center">
+                                    <li class="list-inline-item">
+                                        <p><small style="color: #6a737d;"><i class="fa fa-calendar" data-original-title="" title="" ></i> {{this.date}}</small></p>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        {{#if this.author}}
+                                        <img style="height: 18px;width: 18px;" src="/images/{{user.profilepicture}}">
+                                        {{/if}}
+                                        <span style="font-size: 16px;color: #6a737d;">{{this.author}}</span>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <i class="fa fa-file-archive-o" aria-hidden="true"></i>
+                                         <a href="/categories/show/{{this.category}}"><span style="font-size: 16px;color: #6a737d;">{{this.category}}</span></a>
+                                    </li>
+                                </ul>
+                                
+                            </div>
+                            <div class="content-title fr-view">
+                                    <p>{{{ trimString this.body 150}}}...</p>
+                                    <button class="btn btn-primary"><a href="/posts/singlepage/{{this._id}}" style="color: #fff;">Read more</a> </button>
+                            </div>
+                            <div class="content-footer">
+                                <img class="user-small-img" src="/images/{{user.profilepicture}}">
+                                <span style="font-size: 16px;color: #fff;">Posted by {{this.author}}</span>
+                               
+                                
+                                <div class="user-ditels">
+                                    <div class="user-img"><img src="/images/{{user.profilepicture}}" class="img-fluid"></div>
+                                    <span class="user-full-ditels">
+                        <h3>{{this.author}}</h3>
+                        <p>Web Developer</p>
+                        </span>
+                                    <div class="social-icon">
+                                        <a href="#"><i class="fa fa-facebook" data-toggle="tooltip" data-placement="bottom" title="Facebook"></i></a>
+                                        <a href="#"><i class="fa fa-twitter" data-toggle="tooltip" data-placement="bottom" title="Twitter"></i></a>
+                                        <a href="#"><i class="fa fa-google-plus" data-toggle="tooltip" data-placement="bottom" title="Google Plus"></i></a>
+                                        <a href="#"><i class="fa fa-youtube" data-toggle="tooltip" data-placement="bottom" title="Youtube"></i></a>
+                                        <a href="#"><i class="fa fa-github" data-toggle="tooltip" data-placement="bottom" title="Github"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+                    {{/each}}
+
+                 
+                                
+                          
+                </div>
+            </div>
+            {{/if}}
+            <!--           // RECENT POST===========-->
+            <div class="col-lg-4">
+                <div class="widget-sidebar">
+                    {{#if posts}}
+                    <h2 class="title-widget-sidebar">// RECENT POST</h2>
+                    <div class="content-widget-sidebar">
+                        <ul>
+                            {{#each posts}}
+                            <li class="recent-post">
+                                <div class="post-img">
+                                    <img src="/images/{{this.mainimage}}" class="img-fluid">
+                                </div>
+                                <a href="/posts/singlepage/{{this._id}}">
+                                  <h4 style="font-size: 16px;">{{this.title}}</h4>
+                                </a>
+                                <p><small><i class="fa fa-calendar" data-original-title="" title=""></i> {{this.date}}</small></p>
+                            </li>
+                            <hr>
+                            {{/each}}
+                        </ul>
+                    </div>
+                    {{/if}}
+                </div>
+
+                
+                <!--=====================
+               CATEGORIES
+          ======================-->
+
+                <div class="widget-sidebar">
+                    <h2 class="title-widget-sidebar">// CATEGORIES</h2>
+                    {{#if category}}
+                        {{#each category}}
+                            
+                            <button class="categories-btn" > <a style="color: #fff" href="/categories/show/{{this.category}}">{{this.name}}</a></button>
+                        {{/each}}
+                    {{/if}}
+                </div>
+                <div class="widget-sidebar">
+                    <h2 class="title-widget-sidebar">// ARCHIVES</h2>
+                    <div class="last-post">
+                        <button class="accordion">21/4/2016</button>
+                        <div class="panel">
+                            <li class="recent-post">
+                                <div class="post-img">
+                                    <img src="https://lh3.googleusercontent.com/-13DR8P0-AN4/WM1ZIz1lRNI/AAAAAAAADeo/XMfJ7CM-pQg9qfRuCgSnphzqhaj3SQg6QCJoC/w424-h318-n-rw/thumbnail4.jpg" class="img-responsive">
+                                </div>
+                                <a href="#">
+                                    <h5>Excepteur sint occaecat cupi non proident laborum.</h5>
+                                </a>
+                                <p><small><i class="fa fa-calendar" data-original-title="" title=""></i> 30 Juni 2014</small></p>
+                            </li>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="last-post">
+                        <button class="accordion">5/7/2016</button>
+                        <div class="panel">
+                            <li class="recent-post">
+                                <div class="post-img">
+                                    <img src="https://lh3.googleusercontent.com/-QlnwuVgbxus/WM1ZI1FKQiI/AAAAAAAADeo/nGSd1ExnnfIfIBF27xs8-EdBdfglqFPZgCJoC/w424-h318-n-rw/thumbnail2.jpg" class="img-responsive">
+                                </div>
+                                <a href="#">
+                                    <h5>Excepteur sint occaecat cupi non proident laborum.</h5>
+                                </a>
+                                <p><small><i class="fa fa-calendar" data-original-title="" title=""></i> 30 Juni 2014</small></p>
+                            </li>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="last-post">
+                        <button class="accordion">15/9/2016</button>
+                        <div class="panel">
+                            <li class="recent-post">
+                                <div class="post-img">
+                                    <img src="https://lh3.googleusercontent.com/-wRHL_FOH1AU/WM1ZIxQZ3DI/AAAAAAAADeo/lwJr8xndbW4MHI-lOB7CQ-14FJB5f5SWACJoC/w424-h318-n-rw/thumbnail5.jpg" class="img-responsive">
+                                </div>
+                                <a href="#">
+                                    <h5>Excepteur sint occaecat cupi non proident laborum.</h5>
+                                </a>
+                                <p><small><i class="fa fa-calendar" data-original-title="" title=""></i> 30 Juni 2014</small></p>
+                            </li>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="last-post">
+                        <button class="accordion">2/3/2017</button>
+                        <div class="panel">
+                            <li class="recent-post">
+                                <div class="post-img">
+                                    <img src="https://lh3.googleusercontent.com/-QlnwuVgbxus/WM1ZI1FKQiI/AAAAAAAADeo/nGSd1ExnnfIfIBF27xs8-EdBdfglqFPZgCJoC/w424-h318-n-rw/thumbnail2.jpg" class="img-responsive">
+                                </div>
+                                <a href="#">
+                                    <h5>Excepteur sint occaecat cupi non proident laborum.</h5>
+                                </a>
+                                <p><small><i class="fa fa-calendar" data-original-title="" title=""></i> 30 Juni 2014</small></p>
+                            </li>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!--=====================
+                    NEWSLATTER
+             ======================-->
+                <div class="widget-sidebar">
+                    <h2 class="title-widget-sidebar">// NEWSLATTER</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor ut .</p>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
+                        <input id="email" type="text" class="form-control" name="email" placeholder="Email">
+                    </div>
+                    <button type="button" class="btn btn-warning">Warning</button>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+</section>

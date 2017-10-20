@@ -1,0 +1,326 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+  }
+  body {
+    /* Margin bottom by footer height */
+    margin-bottom: 80px;
+    padding-bottom: 60px; 
+  }
+  .footer { 
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    line-height: 60px; /* Vertically center the text there */
+    background-color: #f5f5f5;
+  }
+  .footer p{
+      margin-bottom: 0px; 
+  }
+  
+  
+  /* Custom page CSS
+  -------------------------------------------------- */
+  /* Not required for template or sticky footer method. */
+
+
+  .container {
+    width: auto;
+    max-width: 680px;
+    padding: 0 15px;
+  }
+  #blog-section{background-color:#ECF0F1;}
+  .content-title{padding:5px;background-color:#fff;}
+  .content-title h3 a{color:#34495E;text-decoration:none; transition: 0.5s;}
+  .content-title h3 a:hover{color:#F39C12; }
+  .content-footer{background-color:#16A085;padding:10px;position: relative;}
+  .content-footer span a {
+      color: #fff;
+      display: inline-block;
+      padding: 6px 5px;
+      text-decoration: none;
+      transition: 0.5s;
+  }
+  .content-footer span a:hover{     
+      color:#F39C12;   
+  }
+  aside{
+      margin-top: 30px;
+      -webkit-box-shadow: 1px 4px 16px 3px rgba(199,197,199,1);
+  -moz-box-shadow: 1px 4px 16px 3px rgba(199,197,199,1);
+  box-shadow: 1px 4px 16px 3px rgba(199,197,199,1);}
+  aside .content-footer>img {
+      width: 33px;
+      height: 33px;
+      border-radius: 100%;
+      margin-right: 10px;
+      border: 2px solid #fff;
+  }
+  
+  .user-ditels {
+      width: 300px;
+      top: -100px;
+      height: 100px;
+      padding-bottom: 99px;
+      position: absolute;
+      border: solid 2px #fff;
+      background-color: #34495E;
+      right: 25px;
+      display: none;
+      z-index: 1;
+  }
+  
+  @media (max-width:768px){
+      .user-ditels {   
+      right: 5px;   
+  }
+      
+  }
+  .user-small-img{cursor: pointer;}
+  
+  .content-footer:hover .user-ditels  {
+      display: block;
+  }
+  
+  
+  .content-footer .user-ditels .user-img{width: 100px;height:100px;float: left;}
+  .user-full-ditels h3 {
+      color: #fff;
+      display: block;
+      margin: 0px;
+      padding-top: 10px;
+      padding-right: 28px;
+      text-align: right;
+  }
+  .user-full-ditels p{    
+      color: #fff;
+      display: block;
+      margin: 0px;
+       padding-right: 20px;
+      padding-top: 5px;
+     text-align: right;}
+  .social-icon {
+      background-color: #fff;
+      margin-top: 10px;
+      padding-right: 20px;
+      text-align: right;
+  }
+  .social-icon>a{font-size:20px;text-decoration:none;padding: 5px;}
+  .social-icon a:nth-of-type(1){color:#4E71A8;}
+  .social-icon a:nth-of-type(2){color:#3FA1DA;}
+  .social-icon a:nth-of-type(3){color:#E3411F;}
+  .social-icon a:nth-of-type(4){color:#CA3737;}
+  .social-icon a:nth-of-type(5){color:#3A3A3A;}
+  
+  
+  /*recent-post-col////////////////////*/
+  .widget-sidebar {
+      background-color: #fff;
+      padding: 20px;
+      margin-top: 30px;
+  }
+  
+  .title-widget-sidebar {
+      font-size: 14pt;
+      border-bottom: 2px solid #e5ebef;
+      margin-bottom: 15px;
+      padding-bottom: 10px;    
+      margin-top: 0px;
+  }
+  
+  .title-widget-sidebar:after {
+      border-bottom: 2px solid #f1c40f;
+      width: 150px;
+      display: block;
+      position: absolute;
+      content: '';
+      padding-bottom: 10px;
+  }
+  
+  .recent-post{width: 100%;list-style-type: none;}
+  .post-img img {
+      width: 100px;
+      height: 70px;
+      float: left;
+      margin-right: 15px;
+      border: 5px solid #16A085;
+      transition: 0.5s;
+  }
+  
+  .recent-post a {text-decoration: none;color:#34495E;transition: 0.5s;}
+  .post-img, .recent-post a:hover{color:#F39C12;}
+  .post-img img:hover{border: 5px solid #F39C12;}
+  
+  /*===============ARCHIVES////////////////////////////*/
+  
+  
+  
+  button.accordion {
+      background-color: #16A085;
+      color: #fff;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 15px;
+      transition: 0.4s;
+  }
+  
+  button.accordion.active, button.accordion:hover {
+      background-color: #F39C12;color: #fff;
+  }
+  
+  button.accordion:after {
+      content: '\002B';
+      color: #fff;
+      font-weight: bold;
+      float: right;
+      margin-left: 5px;
+  }
+  
+  button.accordion.active:after {
+      content: "\2212";
+  }
+  
+  .panel {
+      padding: 0 18px;
+      background-color: white;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+  }
+  
+  
+  /*categories//////////////////////*/
+  
+  .categories-btn{
+      background-color: #F39C12;
+      margin-top:30px;
+      color: #fff;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 15px;
+      transition: 0.4s;
+      
+  }
+  .categories-btn:after {
+      content: '\25BA';
+      color: #fff;
+      font-weight: bold;
+      float: right;
+      margin-left: 5px;
+  }
+  .categories-btn:hover {
+      background-color: #16A085;color: #fff;
+  }
+  
+  .form-control{border-radius: 0px;}
+  
+  .btn-warning {
+      border-radius: 0px;
+      background-color: #F39C12;
+      margin-top: 15px;
+  }
+  .input-group-addon{border-radius: 0px;}
+
+
+/* Add comment box css */
+
+/*
+    Image credits:
+    uifaces.com (http://uifaces.com/authorized)
+*/
+
+#login { display: none; }
+.login,
+.logout { 
+    position: absolute; 
+    top: -3px;
+    right: 0;
+}
+.page-header { position: relative; }
+.reviews {
+    color: #555;    
+    font-weight: bold;
+    margin: 10px auto 20px;
+}
+.notes {
+    color: #999;
+    font-size: 12px;
+}
+.media .media-object { max-width: 120px; }
+.media-body { position: relative; }
+.media-date { 
+    position: absolute; 
+    right: 25px;
+    top: 25px;
+}
+.media-date li { padding: 0; }
+.media-date li:first-child:before { content: ''; }
+.media-date li:before { 
+    content: '.'; 
+    margin-left: -2px; 
+    margin-right: 2px;
+}
+.media-comment { margin-bottom: 20px; }
+.media-replied { margin: 0 0 20px 50px; }
+.media-replied .media-heading { padding-left: 6px; }
+
+.btn-circle {
+    font-weight: bold;
+    font-size: 12px;
+    padding: 6px 15px;
+    border-radius: 20px;
+}
+.btn-circle span { padding-right: 6px; }
+.embed-responsive { margin-bottom: 20px; }
+.tab-content {
+    padding: 50px 15px;
+    border: 1px solid #ddd;
+    border-top: 0;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+.custom-input-file {
+    overflow: hidden;
+    position: relative;
+    width: 120px;
+    height: 120px;
+    background: #eee url('https://s3.amazonaws.com/uifaces/faces/twitter/walterstephanie/128.jpg');    
+    background-size: 120px;
+    border-radius: 120px;
+}
+input[type="file"]{
+    z-index: 999;
+    line-height: 2;
+
+    position: absolute;
+    filter: alpha(opacity = 0);-ms-filter: "alpha(opacity=0)";
+    
+}
+.uploadPhoto {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    display: none;
+    width: 50%;
+    height: 50%;
+    color: #fff;    
+    text-align: center;
+    line-height: 60px;
+    text-transform: uppercase;    
+    background-color: rgba(0,0,0,.3);
+    border-radius: 50px;
+    cursor: pointer;
+}
+.custom-input-file:hover .uploadPhoto { display: block; }

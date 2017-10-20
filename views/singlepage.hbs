@@ -1,0 +1,240 @@
+{{#each errors}}
+<div class="alert alert-danger" role="alert">
+    <strong>Oh snap! {{this.msg}}</strong> 
+</div>
+{{/each}}\
+ {{#if message}}
+        <div class="alert alert-success" role="alert">
+            <strong>Oh Great! {{message}}</strong> 
+        </div>
+    {{/if}}
+<div class="section">
+  <div class="container">
+    <div class="row">
+      <!-- Blog Post -->
+      <div class="col-sm-8">
+        <div class="blog-post blog-single-post">
+          <div class="content-title single-post-title">
+            <h3>{{post.title}}</h3>
+
+          </div>
+          <div class="content-title">
+            <p class='text-muted ubuntu'>By {{post.author}} |<a href="/categories/show/{{post.category}}"><span style="font-size: 16px; padding: 5px;">{{post.category}}</span></a>  <i class="glyphicon glyphicon-time"></i>{{post.date}}</i></p>
+           
+          </div>
+          <div class="single-post-image">
+            <img src="/images/{{post.mainimage}}" alt="Post Title"  class="img-fluid">
+          </div>
+          <div class="single-post-content">
+            {{{post.body}}}
+          </div>
+        </div>
+      </div>
+      <!-- End Blog Post -->
+       <!--           // RECENT POST===========-->
+            <div class="col-lg-4">
+               <div class="widget-sidebar">
+                    {{#if posts}}
+                    <h2 class="title-widget-sidebar">// RECENT POST</h2>
+                    <div class="content-widget-sidebar">
+                        <ul>
+                            {{#each posts}}
+                            <li class="recent-post">
+                                <div class="post-img">
+                                    <img src="/images/{{this.mainimage}}" class="img-fluid">
+                                </div>
+                                <a href="/posts/singlepage/{{this._id}}">
+                                  <h4 style="font-size: 16px;">{{this.title}}</h4>
+                                </a>
+                                <p><small><i class="fa fa-calendar" data-original-title="" title=""></i> {{this.date}}</small></p>
+                            </li>
+                            <hr>
+                            {{/each}}
+                        </ul>
+                    </div>
+                    {{/if}}
+                </div>
+
+                <div class="widget-sidebar">
+                    <h2 class="title-widget-sidebar">// ARCHIVES</h2>
+                    <div class="last-post">
+                        <button class="accordion">21/4/2016</button>
+                        <div class="panel">
+                            <li class="recent-post">
+                                <div class="post-img">
+                                    <img src="https://lh3.googleusercontent.com/-13DR8P0-AN4/WM1ZIz1lRNI/AAAAAAAADeo/XMfJ7CM-pQg9qfRuCgSnphzqhaj3SQg6QCJoC/w424-h318-n-rw/thumbnail4.jpg" class="img-responsive">
+                                </div>
+                                <a href="#">
+                                    <h5>Excepteur sint occaecat cupi non proident laborum.</h5>
+                                </a>
+                                <p><small><i class="fa fa-calendar" data-original-title="" title=""></i> 30 Juni 2014</small></p>
+                            </li>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="last-post">
+                        <button class="accordion">5/7/2016</button>
+                        <div class="panel">
+                            <li class="recent-post">
+                                <div class="post-img">
+                                    <img src="https://lh3.googleusercontent.com/-QlnwuVgbxus/WM1ZI1FKQiI/AAAAAAAADeo/nGSd1ExnnfIfIBF27xs8-EdBdfglqFPZgCJoC/w424-h318-n-rw/thumbnail2.jpg" class="img-responsive">
+                                </div>
+                                <a href="#">
+                                    <h5>Excepteur sint occaecat cupi non proident laborum.</h5>
+                                </a>
+                                <p><small><i class="fa fa-calendar" data-original-title="" title=""></i> 30 Juni 2014</small></p>
+                            </li>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="last-post">
+                        <button class="accordion">15/9/2016</button>
+                        <div class="panel">
+                            <li class="recent-post">
+                                <div class="post-img">
+                                    <img src="https://lh3.googleusercontent.com/-wRHL_FOH1AU/WM1ZIxQZ3DI/AAAAAAAADeo/lwJr8xndbW4MHI-lOB7CQ-14FJB5f5SWACJoC/w424-h318-n-rw/thumbnail5.jpg" class="img-responsive">
+                                </div>
+                                <a href="#">
+                                    <h5>Excepteur sint occaecat cupi non proident laborum.</h5>
+                                </a>
+                                <p><small><i class="fa fa-calendar" data-original-title="" title=""></i> 30 Juni 2014</small></p>
+                            </li>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="last-post">
+                        <button class="accordion">2/3/2017</button>
+                        <div class="panel">
+                            <li class="recent-post">
+                                <div class="post-img">
+                                    <img src="https://lh3.googleusercontent.com/-QlnwuVgbxus/WM1ZI1FKQiI/AAAAAAAADeo/nGSd1ExnnfIfIBF27xs8-EdBdfglqFPZgCJoC/w424-h318-n-rw/thumbnail2.jpg" class="img-responsive">
+                                </div>
+                                <a href="#">
+                                    <h5>Excepteur sint occaecat cupi non proident laborum.</h5>
+                                </a>
+                                <p><small><i class="fa fa-calendar" data-original-title="" title=""></i> 30 Juni 2014</small></p>
+                            </li>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!--=====================
+               CATEGORIES
+          ======================-->
+                <div class="widget-sidebar">
+                    <h2 class="title-widget-sidebar">// CATEGORIES</h2>
+                    <button class="categories-btn">Audio</button>
+                    <button class="categories-btn">Blog</button>
+                    <button class="categories-btn">Gallery</button>
+                    <button class="categories-btn">Images</button>
+                </div>
+
+                <!--=====================
+                    NEWSLATTER
+             ======================-->
+                <div class="widget-sidebar">
+                    <h2 class="title-widget-sidebar">// NEWSLATTER</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor ut .</p>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
+                        <input id="email" type="text" class="form-control" name="email" placeholder="Email">
+                    </div>
+                    <button type="button" class="btn btn-warning">Warning</button>
+                </div>
+
+
+            </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-10 col-sm-offset-1">
+        <div class="page-header">
+            <h3 class="reviews">Leave your comment</h3>
+        </div>
+        <div class="comment-tabs">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="comments-loyout" data-toggle="tab" href="#comments" role="tab" aria-controls="comments" aria-expanded="true">Comments</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="add-comments" data-toggle="tab" href="#addcomments" role="tab" aria-controls="addcomments">Add comment</a>
+                </li>
+                
+            </ul>
+            
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="comments" role="tabpanel" aria-labelledby="comments-loyout">
+                    
+                   
+                    <ul class="media-list">
+                    {{#if post.comments}}
+                    {{#each comment}}
+                      <li class="media">
+                        {{!-- <a class="pull-left" href="#">
+                          <img class="media-object img-circle img-fluid" src="https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg" alt="profile">
+                        </a> --}}
+                        <div class="media-body">
+                          <div class="well well-lg">
+                              <h4 class="media-heading text-uppercase reviews">{{comment.name}}</h4>
+                             
+                              <p class="media-comment">
+                                {{comment.addComment}}
+                              </p>
+                              <p><small style="color: #fff"><i class="fa fa-calendar" data-original-title="" title="" ></i> {{comment.commentDate}}</small></p>
+                              {{!-- <a class="btn btn-info btn-circle text-uppercase" href="#" id="reply"><span class="glyphicon glyphicon-share-alt"></span> Reply</a>
+                              <a class="btn btn-warning btn-circle text-uppercase" data-toggle="collapse" href="#replyOne"><span class="glyphicon glyphicon-comment"></span> 2 comments</a> --}}
+                          </div>              
+                        </div>
+                        
+                      </li>          
+                    {{/each}} 
+                    {{/if}}
+                    </ul> 
+                </div>
+                <div class="tab-pane fade show active" id="addcomments" role="tabpanel" aria-labelledby="add-comments">
+                     <form action="/posts/addcomment" method="post" class="form-horizontal" id="commentForm" role="form"> 
+                        <input name="postid" type="hidden" value="{{post._id}}">
+                        <div class="form-group">
+                            <label for="name" class="col-sm-2 control-label">Name</label>
+                            <div class="col-sm-10">
+                              <input type="text" class="form-control" name="name" id="name" placeholder="Vilma palma">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="col-sm-2 control-label">Email</label>
+                            <div class="col-sm-10">
+                              <input type="email" class="form-control" name="email" id="email" placeholder="vilma@mail.com">
+                            </div>
+                        </div>  
+                        <div class="form-group">
+                            <label for="email" class="col-sm-2 control-label">Comment</label>
+                            <div class="col-sm-10">
+                              <textarea class="form-control" name="addComment" id="addComment" rows="5"></textarea>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">                    
+                                <button class="btn btn-success btn-circle text-uppercase" type="submit"  name="submit" id="submitComment" value="Add Comment"><span class="glyphicon glyphicon-send"></span> Summit comment</button>
+                            </div>
+                        </div>            
+                    </form>
+                </div>
+                
+                
+                
+            </div>
+            
+        </div>
+	</div>
+  </div>
+  
+  
+</div>

@@ -1,0 +1,80 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-10 offset-md-1">
+            <span class="anchor" id="formUserEdit"></span>
+            <hr class="my-5">
+            
+                {{#each errors}}
+                <div class="alert alert-danger" role="alert">
+                    <strong>Oh snap! {{this.msg}}</strong> 
+                </div>
+                {{/each}}
+                
+
+            <!-- form user info -->
+            <div class="card card-outline-secondary">
+                <div class="card-header">
+                    <h3 class="mb-0">Add Post</h3>
+                </div>
+                <div class="card-block">
+                    <form class="form" role="form" autocomplete="off" method="POST" action="/posts/add" enctype="multipart/form-data">
+                        <div class="form-group row">
+                            <label class="col-lg-3 col-form-label form-control-label">Title</label>
+                            <div class="col-lg-9">
+                                <input class="form-control" type="text" name="title" placeholder="Enter title">
+                            </div>
+                        </div>
+                       
+                        <div class="form-group row">
+                            <label class="col-lg-3 col-form-label form-control-label">Category</label>
+                            <div class="col-lg-9">
+                                <select id="user_time_zone" class="form-control" name="category" size="0">
+                                    {{#each categories}}
+                                        <option value="{{this.name}}">{{this.name}}</option>
+                                    {{/each}}
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-lg-3 col-form-label form-control-label">Author</label>
+                            <div class="col-lg-9">
+                                <input class="form-control"  name="author" type="hidden" value="{{user.name}}">
+                                <h5 >{{user.name}}</h5>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-lg-3 col-form-label form-control-label">Body</label>
+                            <div class="col-lg-9"> 
+                                <textarea class="form-control" name="body" id="editor" placeholder="Enter your text here."  row="5"></textarea>      
+
+                            </div>
+                            
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-lg-3 col-form-label form-control-label">Main Image</label>
+                            <div class="col-lg-9">
+                               <div class="form-group">
+                                <input type="file" name="mainimage" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+                                
+                            </div>
+                                
+                            </div>
+                        </div>
+                       
+                        <div class="form-group row">
+                            <label class="col-lg-3 col-form-label form-control-label"></label>
+                            <div class="col-lg-9">
+                                <input type="reset" class="btn btn-secondary" value="Cancel">
+                                <input type="submit" class="btn btn-primary" value="Post">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- /form user info -->
+
+        </div>
+        <!--/col-->
+    </div>
+</div>

@@ -1,0 +1,43 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <span class="anchor" id="formUserEdit"></span>
+            <hr class="my-5">
+            {{#each errors}}
+            <div class="alert alert-danger" role="alert">
+                <strong>Oh snap! {{this.msg}}</strong> 
+            </div>
+            {{/each}}
+
+            <!-- form user info -->
+            <div class="card card-outline-secondary">
+                <div class="card-header">
+                    <h3 class="mb-0">Add Category</h3>
+                </div>
+                <div class="card-block">
+                    <form class="form" role="form" autocomplete="off" method="POST" action="/categories/add" >
+                        <div class="form-group row">
+                            <label class="col-lg-3 col-form-label form-control-label">Title</label>
+                            <div class="col-lg-9">
+                                <input class="form-control" type="text" name="name" placeholder="Enter Category name">
+                            </div>
+                        </div>
+                       
+                        
+                        <div class="form-group row">
+                            <label class="col-lg-3 col-form-label form-control-label"></label>
+                            <div class="col-lg-9">
+                                <input type="reset" class="btn btn-secondary" value="Cancel">
+                                <input type="submit" class="btn btn-primary" value="Post">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- /form user info -->
+
+        </div>
+        <!--/col-->
+    </div>
+</div>
