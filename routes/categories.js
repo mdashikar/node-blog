@@ -18,6 +18,15 @@ router.get('/show/:category', (req,res, next) => {
     
     
 });
+router.get('/', (req,res, next) => {
+    var categories = db.get('categories');
+    categories.find({}, {}, function(err, category){
+        res.render('index', {
+            "categories" : category
+        });
+    })
+    
+});
 
 router.get('/add', ensureAuthenticated, (req,res, next) => {
     

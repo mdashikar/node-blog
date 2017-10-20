@@ -1,14 +1,8 @@
 {
-  "name": "user-login",
+  "name": "node-blog",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "start": "node server/server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "@ckeditor/ckeditor5-build-classic": "^1.0.0-alpha.1",
     "bcryptjs": "^2.4.3",
@@ -35,5 +29,22 @@
     "passport-local": "*",
     "serve-favicon": "*",
     "template-helpers": "^0.6.7"
-  }
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start" : "node server/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdashikar/node-blog.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mdashikar/node-blog/issues"
+  },
+  "homepage": "https://github.com/mdashikar/node-blog#readme"
 }
+
+  
