@@ -5,7 +5,7 @@ const path = require('path');
 const favicon = require('serve-favicon');
 const logger = require('morgan');
 const cookieParser = require('cookie-parser');
-var cookieSession = require('cookie-session');
+const cookieSession = require('cookie-session');
 const session = require('express-session');
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
@@ -55,12 +55,15 @@ app.use(function(req, res, next){
 });
 
 // Handle Sessions
+// app.use(cookieSession({
+//     secret: 'secret',
+//     saveUninitialized: true,
+//     resave: true
+// }));
 app.use(cookieSession({
-    secret: 'secret',
-    saveUninitialized: true,
-    resave: true
-}));
-
+  name: 'session',
+  keys: ['key1', 'key2']
+}))
 // Passport 
 app.use(passport.initialize());
 app.use(passport.session());
