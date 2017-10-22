@@ -20,14 +20,9 @@
                                 </div>
                                 <ul class="list-inline text-center">
                                     <li class="list-inline-item">
-                                        <p><small style="color: #6a737d;"><i class="fa fa-calendar" data-original-title="" title="" ></i> {{this.date}}</small></p>
+                                        <p><small style="color: #6a737d;">Published on <i class="fa fa-calendar" data-original-title="" title="" ></i> {{this.date}}</small></p>
                                     </li>
-                                    <li class="list-inline-item">
-                                        {{#if this.author}}
-                                        <img style="height: 18px;width: 18px;" src="/images/{{user.profilepicture}}">
-                                        {{/if}}
-                                        <span style="font-size: 16px;color: #6a737d;">{{this.author}}</span>
-                                    </li>
+                                    
                                     <li class="list-inline-item">
                                         <i class="fa fa-file-archive-o" aria-hidden="true"></i>
                                          <a href="/categories/show/{{this.category}}"><span style="font-size: 16px;color: #6a737d;">{{this.category}}</span></a>
@@ -40,12 +35,12 @@
                                     <button class="btn btn-primary"><a href="/posts/singlepage/{{this._id}}" style="color: #fff;">Read more</a> </button>
                             </div>
                             <div class="content-footer">
-                                <img class="user-small-img" src="/images/{{user.profilepicture}}">
+                                <img class="user-small-img" src="/images/{{this.pictureid}}">
                                 <span style="font-size: 16px;color: #fff;">Posted by {{this.author}}</span>
                                
                                 
                                 <div class="user-ditels">
-                                    <div class="user-img"><img src="/images/{{user.profilepicture}}" class="img-fluid"></div>
+                                    <div class="user-img"><img src="/images/{{this.pictureid}}" class="img-fluid"></div>
                                     <span class="user-full-ditels">
                         <h3>{{this.author}}</h3>
                         <p>Web Developer</p>

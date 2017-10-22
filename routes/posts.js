@@ -45,6 +45,7 @@ router.post('/add',upload.single('mainimage'),  (req,res, next) => {
     var category = req.body.category;
     var body = req.body.body;
     var author = req.body.author;
+    var pictureid = req.body.pictureid;
     var date = new Date();
     if(req.file){
         console.log('Files uploading....');
@@ -77,6 +78,7 @@ router.post('/add',upload.single('mainimage'),  (req,res, next) => {
              "body": body,
              "date": moment(date).format("MMM Do YY"),
              "author": author,
+             "pictureid": pictureid,
              "mainimage": mainimage
          }, function(err, post){
              if(err){
