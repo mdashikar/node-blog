@@ -19,7 +19,8 @@ const bcrypt = require('bcryptjs');
 const mongo = require('mongodb');
 const mongoose = require('mongoose');
 //const moment = require('moment');
-const db = require('monk')('localhost/nodeblog');
+const url = 'localhost/nodeblog' || process.env.MONGODB_URI; 
+const db = require('monk')(url);
 var helpers = require('handlebars-helpers')();
 
 //var db = mongoose.connection;
