@@ -3,7 +3,8 @@ var router = express.Router();
 
 const mongo = require('mongodb');
 const moment = require('moment');
-var db = require('monk')('localhost/nodeblog');
+const url = 'localhost/nodeblog' || process.env.MONGODB_URI; 
+const db = require('monk')(url);
 
 
 router.get('/show/:category', (req,res, next) => {

@@ -5,7 +5,8 @@ const multer = require('multer');
 var upload = multer({dest: './public/images'});
 const mongo = require('mongodb');
 const moment = require('moment');
-var db = require('monk')('localhost/nodeblog');
+const url = 'localhost/nodeblog' || process.env.MONGODB_URI; 
+const db = require('monk')(url);
 
 var helpers = require('handlebars-helpers')();  
 
