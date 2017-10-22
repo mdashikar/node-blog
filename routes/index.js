@@ -1,7 +1,7 @@
 const express = require('express');
 var router = express.Router();
 const mongo = require('mongodb');
-const url = 'localhost/nodeblog' || process.env.MONGODB_URI; 
+const url = process.env.MONGODB_URI || 'localhost/nodeblog'; 
 const db = require('monk')(url);
 
 /*GET home page */
