@@ -7,7 +7,7 @@ if(process.env.MONGODB_URI) {
    
 }else {
 
-    mongoose.connect('mongodb://localhost/user-login-system', function(err){ //db = 'mongodb://localhost/yourdb'
+    mongoose.connect('mongodb://localhost/user-login-system',{ useNewUrlParser: true }, function(err){ //db = 'mongodb://localhost/yourdb'
         if(err){
             console.log(err);
         }else {
